@@ -1,0 +1,21 @@
+<head>
+  <title>Chat App</title>
+</head>
+<body>
+  {{> chat}}
+</body>
+
+<template name="chat">
+    <div>{{> loginButtons align="right"}}</div>
+    {{#if currentUser}}
+    <ul>
+      {{#each messages}}
+        <li>
+          {{profile}} <b>{{username}}</b> says<br/>
+          {{text}}
+        </li>
+      {{/each}}
+    </ul>
+      <form><textarea></textarea></form>
+    {{/if}}
+</template>
